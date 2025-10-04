@@ -1,4 +1,5 @@
 source "null" "extra-config" {
+  # https://developer.hashicorp.com/packer/docs/builders/null
   communicator = "none"
 }
 

@@ -1,4 +1,6 @@
 source "file" "password" {
+  # https://developer.hashicorp.com/packer/docs/builders/file
+
   # Generate random password.
   content = uuidv4()
   target  = local.random_password_file
