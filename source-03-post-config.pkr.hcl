@@ -11,7 +11,9 @@ build {
   provisioner "ansible" {
     playbook_file = "${local.path_ansible_scripts}/kvm_setup.yml"
 
-    ansible_env_vars = ["ANSIBLE_CONFIG=${local.path_ansible_scripts}/ansible.cfg"]
+    ansible_env_vars = [
+      "ANSIBLE_CONFIG=${local.path_ansible_scripts}/ansible.cfg"
+    ]
 
     inventory_file = "${local.path_ansible_scripts}/inventory/hosts"
 
