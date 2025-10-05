@@ -117,7 +117,9 @@ build {
     user          = var.ssh_username
     use_proxy     = var.use_proxy
 
-    ansible_env_vars = ["ANSIBLE_CONFIG=${local.path_ansible_scripts}/ansible.cfg"]
+    ansible_env_vars = [
+      "ANSIBLE_CONFIG=${local.path_ansible_scripts}/ansible.cfg"
+    ]
 
     extra_arguments = [
       "--extra-vars",
