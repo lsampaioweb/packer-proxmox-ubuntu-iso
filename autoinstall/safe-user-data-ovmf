@@ -52,7 +52,7 @@ autoinstall:
       # EFI System Partition (ESP) for UEFI booting.
       # Must be FAT32 and mounted at /boot/efi.
       #   'flag: boot' marks this as the ESP for UEFI booting.
-      #   'grub_device: true' is required on the ESP partition (not just the disk) because Subiquity in Ubuntu 24.04.2 fails to recognize the ESP as the bootloader partition without it. Without this, the installer fails with: "autoinstall config did not create needed bootloader partition".
+      #   'grub_device: true' is required on the ESP partition (not just the disk) because Subiquity in Ubuntu 24.04.3 fails to recognize the ESP as the bootloader partition without it. Without this, the installer fails with: "autoinstall config did not create needed bootloader partition".
       # This might be a Subiquity bug or quirk specific to this ISO version.
       - {type: partition, id: efi_part, device: root_disk, number: 1, size: 512M, flag: boot, grub_device: true}
 
